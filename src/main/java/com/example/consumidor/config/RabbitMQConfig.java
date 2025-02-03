@@ -11,4 +11,8 @@ public class RabbitMQConfig {
     public Queue myQueue() {
         return new Queue("messages_queue", true);
     }
+    @Bean
+    public Queue myQueue2() {
+        return new Queue("messages_queue2", true);
+    }
 }
