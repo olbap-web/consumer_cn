@@ -18,24 +18,19 @@ public class RabbitConsumer {
     @RabbitListener(queues = "messages_queue")
     public void receiveMessage(String message) {
 
-        
         //AQUI TENEMOS QUE GENERAR EL REGISTRO EN LA BDDD
 
-        // List<MessageEntity> msjs = messageService.getMessages();
-
+        // List<MessageEntity> msjs = messageService.getMessages(); // Esto nos tira error 
 
         System.out.println("Mensaje Recibido cola 1: " + message);
     }
 
     @RabbitListener(queues = "messages_queue2")
     public void receiveMessage2(String message) {
-
         
         //AQUI TENEMOS QUE GENERAR EL REGISTRO EN LA BDDD
 
-        // List<MessageEntity> msjs = messageService.getMessages();
-
-
+        // List<MessageEntity> msjs = messageService.getMessages(); // Esto nos tira error
 
         System.out.println("Mensaje Recibido cola 2: " + message);
 
